@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>figure</title>
+
+</head>
+<body onpageshow='myfunction()'>
+<h2>place visit hear</h2>
+
+<p>Puglia's most famous sight is the unique conical houses (Trulli) found in the area around Alberobello, a declared UNESCO World Heritage Site.</p>
+<figure>
+<img src='cup.jpg'width='300px'height='200px'border='2px solid black'onmousemove='imgbig(this)'onmouseout='imgnormal(this)'/>
+<figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+</figure>
+
+<fieldset>
+<legend>Employe log in details</legend>
+ User Name : <input type='text'/onblur='myfunction1()'id='name'> </br></br>
+PassWord : <input type='password'id='psw'onfocus='myfun(this.id)'/> </br>
+<input type='button'value='Log In'/>
+</fieldset></br>
+
+<select id='select'onchange='f1()'>
+
+<option value='hond'>hond
+<option value='hero'>hero
+<option value='bmw'>bmw
+<option value='benje'>benje
+<option value='suzuki'>suzuki
+
+</select>
+
+<h2 id='demo'></h2>
+
+<script>
+function myfun(z){
+document.getElementById(z).style.background='yellow';
+}
+</script>
+<script>
+function imgbig(a){
+a.style.width='600px';
+a.style.height='500px';
+}
+</script>
+<script>
+function imgnormal(a){
+a.style.width='300px';
+a.style.height='200px';
+}
+</script>
+
+<script>
+function myfunction(){
+alert('This page load......');
+}
+</script>
+<script>
+function myfunction1(){
+var x=document.getElementById('name');
+x.value=x.value.toUpperCase();
+
+</script>
+<script>
+function f1(){
+var y=document.getElementById('select').value;
+document.getElementById('demo').innerHTML="your selectd car : " +y;
+}
+</script>
+
+</body>
+</html>
